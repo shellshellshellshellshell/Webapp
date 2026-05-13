@@ -1,0 +1,61 @@
+p {
+    /* applied to all paragraphs */
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    /* sets spacing between lines of text */
+    text-align: center;
+}
+
+li {
+    /* applied to unordered list */
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    /* sets spacing between lines of text */
+    text-align: left;
+}
+
+h1 {
+    /* applied to all h1 headings */
+    margin: 0 auto;
+    text-decoration: none;
+    /* Border style*/
+    padding: 0.5rem;
+    background-color: #E0C3B8;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+
+h2 {
+    /* applied to all h2 headings */
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    /* applied to all h3 headings */
+    text-align: center;
+    text-decoration: none;
+}
+
+#serverLink a {
+    text-decoration: none;
+    /* do not want link to be underlined */
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    /* sets spacing between lines of text */
+    color: white;
+}
+
+.serverLinkBackground {
+    /* I found it easier to convert the link background
+    into a block because I couldn't center the link otherwise */
+    display: block;
+    margin: 0 auto;
+    /* centers the div */
+    /* Border style*/
+    padding: 0.5rem;
+    background-color: #E0C3B8;
+    border-radius: 0.5rem;
+    width: fit-content;
+    /* div will only be as wide as its content */
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Use this type of comment within HTML -->
+    <title>[Clothing Designs]</title>
+
+    <!-- this is your internal style sheet -->
+    <style>
+        /*  You can only use the "slash star ... star slash" style comment inside a style sheet */
+
+        html,
+        body {
+            /* Prevents tiny white border inside browser window. */
+            /* comma between selectors means apply styling to both the html tag and the body tag */
+            margin: 0rem;
+            padding: 0rem;
+        }
+
+        body {
+            background-color: #E4ECF3;
+            /* red, green, blue (255 is max)
+                                                         this is the turqoise color */
+            color: black;
+            /* color of font */
+            font-family: sans-serif;
+            /* "no tail" font is more readable for small font */
+        }
+
+        #titleNav {
+            /* titleNav is fixed, always at the top. # means apply to id titleNav*/
+
+            /* position fixed removes the element from the normal flow, 
+                   placing it w.r.t. the browser's edge as specified by top/bottom, left/right */
+            position: fixed;
+            top: 0rem;
+            left: 0rem;
+            z-index: 1;
+            /* To make sure titleNav is on top of content, 
+                                   give it a higher z-index than content 
+                                   (which has the default value, zero). */
+            width: 100%;
+            /* fixed elements are not 100% by default like other divs would be */
+
+            font-family: serif;
+            letter-spacing: 0.1rem;
+            /* spaces out letters a bit */
+            color: white;
+            /* font color */
+            background-color: #E0C3B8;
+            padding: 0.5rem;
+        }
+
+        #pageTitle {
+            font-size: 3rem;
+            white-space: nowrap;
+        }
+
+        #nav {
+            text-align: right;
+            font-size: 1rem;
+            font-weight: bold;
+            padding-right: 1rem;
+            padding-bottom: 0.75rem;
+            white-space: nowrap;
+            /* nothing (no text) in the nav bar should wrap */
+        }
+
+        #nav * {
+            /* we want ALL DOM elements inside of #nav to not wrap */
+            white-space: inherit;
+        }
+
+        #nav a {
+            /* space means inside of. This styling applies to links (a tags) inside of id nav */
+            text-decoration: none;
+            /* Do not want links in "nav" to be underlined */
+            color: #E0C3B8;
+            /* light gray: to specify color for links, you have to style the "a" tag */
+        }
+
+        #nav .navLink {
+            /* dot means class. This styling applies to class "navLink" inside of id "nav" */
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        #content {
+            /* Add padding top to prevent titleNav from covering up top of content. 
+                           add padding bottom to prevent bottom content from getting hidden under footer. */
+            padding: 1rem;
+            padding-top: 6rem;
+            /* prevent the top of the content from getting hidden under the fixed titleNav */
+            padding-bottom: 2rem;
+            /* prevent the the bottom of the content from getting hidden under the fixed footer */
+        }
+
+        .contentPic {
+            width: 50%;
+            border-radius: 0.5rem;
+            box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.6);
+            /* color is black which is 60% solid */
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #footer {
+            /* footer fixed, always at the bottom left */
+            position: fixed;
+            bottom: 0rem;
+            left: 0rem;
+            z-index: 1;
+            /* make sure footer is on top of content which would have default z-index value of 0 */
+
+            background-color: #E0C3B8;
+            color: white;
+            width: 100%;
+            /* fixed elements are not 100% by default like other divs would be */
+            text-align: center;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="titleNav">
+
+        <div id="pageTitle">
+            Creative Clothing Designs
+        </div>
+
+        <div id="nav">
+            <a href="index.html" class="navLink">Home</a>
+            <a href="blog.html" class="navLink">Really long long long long long link</a>
+
+        </div>
+
+    </div>
+
+    <div id="content">
+        <h2>
+            My Home Page
+            <link rel="stylesheet" href="indexStyle.css">
+            <!-- linking to stylesheet -->
+        </h2>
+
+        <p>
+            This is my Home Page Content !!!
+            <link rel="stylesheet" href="indexStyle.css">
+        </p>
+
+        <p>
+            If you would like to see my "Hello World" API open up in a new tab,
+            click <a href="hello" target="hello.html">here</a>.
+        </p>
+
+        <h2>Blog</h2>
+
+        <h3> 
+            Design Table
+            <link rel="stylesheet" href="indexStyle.css">
+        </h3>
+
+        <p>This is where users can view and manage their design entries.</p>
+
+        <ul>
+            <link rel="stylesheet" href="indexStyle.css">
+            <li>"designID" : "1"</li>
+            <li>"clothingDesignDifficulty" : "simple"</li>
+            <li>"userImg" : "http://cis-linux2.temple.edu/tomcat10/sp26_3308_tut35988_HW/pics"</li>
+            <li>"datePosted" : "integer"</li>
+            <li>"fabricUsed" : "cotton"</li>
+            <li>"colorsUsed" : "red, white, grey"</li>
+            <li>"clothingAesthetic" : "casual"</li>
+            <li>web_user_id</li>
+            <!-- I'm not sure if this part is correct. -->
+        </ul>
+
+
+        <h3>Server Page</h3>
+
+        <div id="serverLink" class="serverLinkBackground">
+            <a href="fasion">Server Side Code</a>
+            <!-- Made a new link called /fasion in the controller 
+             so I don't replace /hello -->
+        </div>
+
+        <h3> My Database Experience</h3>
+        <p>
+            I don't have experience with databases. However, I'm taking the database corse with
+            Professor Nancy right now. So far, it's a little confusing, but i'm getting the hang of
+            it slowly.
+
+        <p>
+
+        <h3>
+            My Web Development Experience
+        </h3>
+        <p>
+            I've had some experience with web development from my last semester class
+            Computer Systems and Low Level Programming. For one of our labs and our
+            final project, we had to use HTML, CSS, and JavaScript to create a web page.
+            Even though we were told to use ChatGPT to help us with the code, I still tried to
+            understand what the code meant and how it worked. I even added some of my own.
+        </p>
+
+        <h3> HW 1 Home Page </h3>
+        <p>
+            I have a feeling that all the information above the picture isn't supposed to be on this page,
+            but I can't find where else to put it in the instructions. I'm also not sure
+            if the unordered list is what you were looking for or if it should be seen on the page. Other than
+            that, I learned a lot about the formatting and structure of HTML and CSS. Almost
+            enough to feel comfortable with it.
+        </p>
+
+
+        <p class="center">
+            <img src="pics/fasionworkshop.jpg" class="contentPic">
+            <!-- My topic image -->
+        </p>
+
+
+        <p>
+            Have you ever thought of a really unique way to design clothing?
+            Have you ever wanted to share your ideas
+            with others and see theirs as well? This is the place to do it! Make connections, friendships,
+            and collaborations with other fashion enthusiasts. Let's get creative together!
+        </p>
+
+
+
+    </div> <!-- content. [[Keep track of nesting]] -->
+    <div id="footer">
+        [ Michelle Korsah ]
+    </div>
+</body>
+
+</html>
